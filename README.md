@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+🥇 EverScale: A Serverless E-Commerce Product Catalog
+Project Overview
+🥇EverScale is a full-stack, serverless e-commerce product catalog application built to demonstrate modern cloud development principles. It features a responsive React front-end, a secure authentication system, and a robust REST API for managing product data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project showcases a comprehensive understanding of the full software development lifecycle on the AWS platform.
 
-## Available Scripts
+Key Features
+Responsive & Dynamic Front-End: A modern, visually appealing front-end built with React and Tailwind CSS that looks great on any device.
 
-In the project directory, you can run:
+Secure User Authentication: Implemented with Amazon Cognito to provide user sign-up, sign-in, and role-based access control. New users are automatically added to a Customer group using a Lambda trigger.
 
-### `npm start`
+Serverless REST API: A clean, RESTful API built with Amazon API Gateway and AWS Lambda to handle product data operations (Create, Read, Update, Delete).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+NoSQL Database: All product data is stored in a highly scalable and flexible Amazon DynamoDB table.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Automated CI/CD Pipeline: Deployed using AWS Amplify, which automatically builds and publishes the application every time changes are pushed to the main branch of the repository.
 
-### `npm test`
+Architecture Diagram
+The application is built on a serverless, event-driven architecture. The user interacts with the React front-end, which is hosted on AWS Amplify. When a user signs in, Amazon Cognito handles the authentication process. All API calls from the front-end go through Amazon API Gateway, which acts as a secure entry point. These API calls trigger AWS Lambda functions, where the core business logic is executed. The Lambda functions perform Create, Read, Update, and Delete (CRUD) operations on an Amazon DynamoDB table, which serves as the application's NoSQL database.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Technologies Used
+Front-End: React, Tailwind CSS
 
-### `npm run build`
+Backend: AWS Lambda (Node.js/Express.js)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+API: Amazon API Gateway
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Database: Amazon DynamoDB
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Authentication: Amazon Cognito
 
-### `npm run eject`
+CI/CD & Hosting: AWS Amplify
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+How to Run Locally
+Clone this repository: git clone https://github.com/Gnanendra494/my-ecommerce-app.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Navigate to the project directory: cd my-ecommerce-app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install dependencies: npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Launch the application: npm start
