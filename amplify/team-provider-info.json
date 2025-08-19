@@ -1,0 +1,44 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-myecommerceapp-dev-b7999-authRole",
+      "UnauthRoleArn": "arn:aws:iam::071078820706:role/amplify-myecommerceapp-dev-b7999-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::071078820706:role/amplify-myecommerceapp-dev-b7999-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-myecommerceapp-dev-b7999-deployment",
+      "UnauthRoleName": "amplify-myecommerceapp-dev-b7999-unauthRole",
+      "StackName": "amplify-myecommerceapp-dev-b7999",
+      "StackId": "arn:aws:cloudformation:ap-south-1:071078820706:stack/amplify-myecommerceapp-dev-b7999/8725e2b0-7c6a-11f0-b6c0-0afc7ed7dd89",
+      "AmplifyAppId": "do0i3bl6r5ij1",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-myecommerceapp-dev-b7999-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-myecommerceapp-dev-b7999-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "myecommerceappe1d3796a": {
+          "googleClientId": "fake-google-client-id"
+        }
+      },
+      "function": {
+        "myecommerceappe1d3796aPostConfirmation": {
+          "GROUP": "Customer",
+          "deploymentBucketName": "amplify-myecommerceapp-dev-b7999-deployment",
+          "s3Key": "amplify-builds/myecommerceappe1d3796aPostConfirmation-37306161684b6d6b4a46-build.zip"
+        },
+        "ecommerceApiHandler": {
+          "deploymentBucketName": "amplify-myecommerceapp-dev-b7999-deployment",
+          "s3Key": "amplify-builds/ecommerceApiHandler-3267653745566e6b4f76-build.zip"
+        }
+      },
+      "api": {
+        "ecommerceApi": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "do0i3bl6r5ij1",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}

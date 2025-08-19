@@ -1,0 +1,143 @@
+{
+  "api": {
+    "ecommerceApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ecommerceApiHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "myecommerceappe1d3796a": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "myecommerceappe1d3796aPostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "ecommerceApiHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "myecommerceappe1d3796aPostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "lastPushTimeStamp": "2025-08-19T09:08:55.395Z",
+      "service": "amplifyhosting",
+      "type": "cicd"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_myecommerceappe1d3796a_googleClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myecommerceappe1d3796a"
+        }
+      ]
+    },
+    "AMPLIFY_function_ecommerceApiHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ecommerceApiHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_ecommerceApiHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ecommerceApiHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_myecommerceappe1d3796aPostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "myecommerceappe1d3796aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_myecommerceappe1d3796aPostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "myecommerceappe1d3796aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_myecommerceappe1d3796aPostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "myecommerceappe1d3796aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_appId": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_type": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    }
+  }
+}
