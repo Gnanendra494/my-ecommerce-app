@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+/* --- Global Styles --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6; /* Light gray background */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --- Form Inputs & Buttons --- */
+input,
+button,
+select,
+textarea {
+  font-family: 'Inter', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:focus,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Tailwind blue-500 focus */
+}
+
+/* --- Links --- */
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Card / Product Containers --- */
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem; /* Tailwind rounded-xl */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Admin Form --- */
+.admin-form input {
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.admin-form button {
+  background-color: #2563eb; /* Tailwind blue-600 */
   color: white;
+  border-radius: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.admin-form button:hover {
+  background-color: #1d4ed8; /* Tailwind blue-700 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* --- Header --- */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #1f2937; /* Tailwind gray-800 */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
   }
 }

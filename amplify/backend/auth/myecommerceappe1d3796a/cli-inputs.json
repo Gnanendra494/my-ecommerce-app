@@ -36,7 +36,7 @@
     "sharedId": "e1d3796a",
     "resourceName": "myecommerceappe1d3796a",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "manual",
+    "useDefault": "defaultSocial",
     "usernameAttributes": [
       "email"
     ],
@@ -68,10 +68,6 @@
         ]
       }
     ],
-    "thirdPartyAuth": true,
-    "authProviders": [
-      "accounts.google.com"
-    ],
     "userPoolGroups": false,
     "adminQueries": false,
     "triggers": {
@@ -91,7 +87,8 @@
     "permissions": [
       "{\n  \"policyName\": \"AddToGroupCognito\",\n  \"trigger\": \"PostConfirmation\",\n  \"effect\": \"Allow\",\n  \"actions\": [\n    \"cognito-idp:AdminAddUserToGroup\",\n    \"cognito-idp:GetGroup\",\n    \"cognito-idp:CreateGroup\"\n  ],\n  \"resource\": {\n    \"paramType\": \"!GetAtt\",\n    \"keys\": [\n      \"UserPool\",\n      \"Arn\"\n    ]\n  }\n}"
     ],
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.dd9wvmyu8537s.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.dd9wvmyu8537s.amplifyapp.com/\"]}",
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"myecommerceappe1d3796aPostConfirmation\"\n  }\n]"
+    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"myecommerceappe1d3796aPostConfirmation\"\n  }\n]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.do0i3bl6r5ij1.amplifyapp.com/\",\"https://main.do0i3bl6r5ij1.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.dd9wvmyu8537s.amplifyapp.com/\",\"https://main.do0i3bl6r5ij1.amplifyapp.com/\"]}",
+    "authProviders": []
   }
 }

@@ -4,19 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🥇EverScale - Shop Smarter</title>
+
     <!-- Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* A custom font for a more professional look */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2C3l+s6w5A9M/48Qe2e5e4uJ8lI6i9g2Z+o8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="App.css">
 </head>
-<body>
+<body class="bg-gray-100 font-inter">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- React Root -->
     <div id="root"></div>
-    <!-- The JavaScript bundle for your React app is automatically inserted here -->
+
+    <!-- Optional modals for Signup & Forgot Password -->
+    <div id="auth-modals">
+        <!-- Signup Modal -->
+        <div id="signup-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-2xl shadow-xl p-6 w-11/12 max-w-md">
+                <h2 class="text-2xl font-bold mb-4 text-center text-blue-700">Sign Up</h2>
+                <form id="signup-form" class="space-y-4">
+                    <input type="text" placeholder="Full Name" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500" required>
+                    <input type="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500" required>
+                    <input type="password" placeholder="Password" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500" required>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl">Sign Up</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal -->
+        <div id="forgot-password-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-2xl shadow-xl p-6 w-11/12 max-w-md">
+                <h2 class="text-2xl font-bold mb-4 text-center text-blue-700">Forgot Password</h2>
+                <form id="forgot-password-form" class="space-y-4">
+                    <input type="email" placeholder="Enter your registered email" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500" required>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl">Send Reset Link</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- React JS Bundle -->
+    <script src="main.js"></script>
 </body>
 </html>
