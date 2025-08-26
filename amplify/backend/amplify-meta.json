@@ -1,0 +1,126 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-myecommerceapp-dev-b7999-authRole",
+      "UnauthRoleArn": "arn:aws:iam::071078820706:role/amplify-myecommerceapp-dev-b7999-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::071078820706:role/amplify-myecommerceapp-dev-b7999-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-myecommerceapp-dev-b7999-deployment",
+      "UnauthRoleName": "amplify-myecommerceapp-dev-b7999-unauthRole",
+      "StackName": "amplify-myecommerceapp-dev-b7999",
+      "StackId": "arn:aws:cloudformation:ap-south-1:071078820706:stack/amplify-myecommerceapp-dev-b7999/8725e2b0-7c6a-11f0-b6c0-0afc7ed7dd89",
+      "AmplifyAppId": "do0i3bl6r5ij1",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-myecommerceapp-dev-b7999-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    }
+  },
+  "auth": {
+    "myecommerceappe1d3796a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-myecommerceapp-dev-b7999-deployment/amplify-cfn-templates/auth/myecommerceappe1d3796a-cloudformation-template.json",
+        "logicalId": "authmyecommerceappe1d3796a"
+      },
+      "lastPushTimeStamp": "2025-08-25T15:31:45.907Z",
+      "output": {
+        "UserPoolId": "ap-south-1_vyt4qPNJb",
+        "AppClientIDWeb": "3df2a37mannl0vii7rul0c4170",
+        "AppClientID": "5qnr9hlo8h5qdne2cqtnv980bv",
+        "IdentityPoolId": "ap-south-1:8ae99e9e-8038-4974-af87-7af864709da0",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-south-1:071078820706:userpool/ap-south-1_vyt4qPNJb",
+        "IdentityPoolName": "myecommerceappe1d3796a_identitypool_e1d3796a__dev",
+        "UserPoolName": "myecommerceappe1d3796a_userpool_e1d3796a",
+        "GoogleWebClient": "1rnkumf1t8hogpu3e7800ucps5",
+        "HostedUIDomain": "everscale-shop-dev",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\",\"http://localhost:3000/\",\"http://localhost:3000/callback/\",\"https://main.do0i3bl6r5ij1.amplifyapp.com/\",\"https://main.do0i3bl6r5ij1.amplifyapp.com/callback/\"],\"LogoutURLs\":[\"https://main.do0i3bl6r5ij1.amplifyapp.com/callback/\",\"https://main.do0i3bl6r5ij1.amplifyapp.com/\",\"http://localhost:3000/\"]}"
+      },
+      "lastPushDirHash": "d894JaUnfkFyFg6FZ/0UfKjTgi4="
+    }
+  },
+  "function": {
+    "ecommerceApiHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2025-08-25T15:30:41.113Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2025-08-25T15:30:41.864Z",
+      "distZipFilename": "ecommerceApiHandler-726b566876516d334445-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-myecommerceapp-dev-b7999-deployment",
+        "s3Key": "amplify-builds/ecommerceApiHandler-726b566876516d334445-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-myecommerceapp-dev-b7999-deployment/amplify-cfn-templates/function/ecommerceApiHandler-cloudformation-template.json",
+        "logicalId": "functionecommerceApiHandler"
+      },
+      "lastPushTimeStamp": "2025-08-25T15:31:46.441Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::071078820706:role/myecommerceappLambdaRole06ed4c7c-dev",
+        "Region": "ap-south-1",
+        "Arn": "arn:aws:lambda:ap-south-1:071078820706:function:ecommerceApiHandler-dev",
+        "Name": "ecommerceApiHandler-dev",
+        "LambdaExecutionRole": "myecommerceappLambdaRole06ed4c7c-dev"
+      },
+      "lastPushDirHash": "v6b5lNBti4iAREdNKW/Cf28sfp8="
+    }
+  },
+  "api": {
+    "ecommerceApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "ecommerceApiHandler",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-myecommerceapp-dev-b7999-deployment/amplify-cfn-templates/api/ecommerceApi-cloudformation-template.json",
+        "logicalId": "apiecommerceApi"
+      },
+      "lastPushTimeStamp": "2025-08-25T15:31:45.912Z",
+      "output": {
+        "ApiName": "ecommerceApi",
+        "RootUrl": "https://moa3h6kcmf.execute-api.ap-south-1.amazonaws.com/dev",
+        "ApiId": "moa3h6kcmf"
+      },
+      "lastPushDirHash": "xi16AYD+x8El0x/N7zCLEAEe7Ho="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2025-08-19T09:08:55.395Z"
+    }
+  }
+}

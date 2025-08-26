@@ -1,45 +1,18 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+// aws-exports.js
+const awsExports = {
+  aws_project_region: 'YOUR_AWS_REGION',
+  aws_cognito_identity_pool_id: 'YOUR_IDENTITY_POOL_ID',
+  aws_cognito_region: 'YOUR_COGNITO_REGION',
+  aws_user_pools_id: 'YOUR_USER_POOL_ID',
+  aws_user_pools_web_client_id: 'YOUR_APP_CLIENT_ID',
+  oauth: {
+    domain: 'YOUR_COGNITO_DOMAIN',
+    scope: ['email', 'profile', 'openid'],
+    redirectSignIn: 'http://localhost:3000/',
+    redirectSignOut: 'http://localhost:3000/',
+    responseType: 'code', // or 'token' depending on your setup
+  },
+};
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-#amplify-do-not-edit-begin
-amplify/\#current-cloud-backend
-amplify/.config/local-*
-amplify/logs
-amplify/mock-data
-amplify/mock-api-resources
-amplify/backend/amplify-meta.json
-amplify/backend/.temp
-build/
-dist/
-node_modules/
-aws-exports.js
-awsconfiguration.json
-amplifyconfiguration.json
-amplifyconfiguration.dart
-amplify-build-config.json
-amplify-gradle-config.json
-amplifytools.xcconfig
-.secret-*
-**.sample
-#amplify-do-not-edit-end
+export default awsExports;
+node_modules

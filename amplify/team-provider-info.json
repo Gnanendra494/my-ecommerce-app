@@ -16,18 +16,13 @@
     "categories": {
       "auth": {
         "myecommerceappe1d3796a": {
-          "googleClientId": "fake-google-client-id"
+          "googleClientId": "1rnkumf1t8hogpu3e7800ucps5"
         }
       },
       "function": {
-        "myecommerceappe1d3796aPostConfirmation": {
-          "GROUP": "Customer",
-          "deploymentBucketName": "amplify-myecommerceapp-dev-b7999-deployment",
-          "s3Key": "amplify-builds/myecommerceappe1d3796aPostConfirmation-37306161684b6d6b4a46-build.zip"
-        },
         "ecommerceApiHandler": {
           "deploymentBucketName": "amplify-myecommerceapp-dev-b7999-deployment",
-          "s3Key": "amplify-builds/ecommerceApiHandler-3267653745566e6b4f76-build.zip"
+          "s3Key": "amplify-builds/ecommerceApiHandler-726b566876516d334445-build.zip"
         }
       },
       "api": {

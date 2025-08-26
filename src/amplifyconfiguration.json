@@ -1,0 +1,48 @@
+{
+  "aws_project_region": "ap-south-1",
+  "aws_cognito_identity_pool_id": "ap-south-1:8ae99e9e-8038-4974-af87-7af864709da0",
+  "aws_cognito_region": "ap-south-1",
+  "aws_user_pools_id": "ap-south-1_vyt4qPNJb",
+  "aws_user_pools_web_client_id": "3df2a37mannl0vii7rul0c4170",
+  "oauth": {
+    "domain": "everscale-shop-dev.auth.ap-south-1.amazoncognito.com",
+    "scope": [
+      "phone",
+      "email",
+      "openid",
+      "profile",
+      "aws.cognito.signin.user.admin"
+    ],
+    "redirectSignIn": "http://localhost:3000/,http://localhost:3000/,http://localhost:3000/callback/,https://main.do0i3bl6r5ij1.amplifyapp.com/,https://main.do0i3bl6r5ij1.amplifyapp.com/callback/",
+    "redirectSignOut": "https://main.do0i3bl6r5ij1.amplifyapp.com/callback/,https://main.do0i3bl6r5ij1.amplifyapp.com/,http://localhost:3000/",
+    "responseType": "code"
+  },
+  "federationTarget": "COGNITO_USER_AND_IDENTITY_POOLS",
+  "aws_cognito_username_attributes": [
+    "EMAIL"
+  ],
+  "aws_cognito_social_providers": [
+    "GOOGLE"
+  ],
+  "aws_cognito_signup_attributes": [
+    "EMAIL"
+  ],
+  "aws_cognito_mfa_configuration": "OFF",
+  "aws_cognito_mfa_types": [
+    "SMS"
+  ],
+  "aws_cognito_password_protection_settings": {
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": []
+  },
+  "aws_cognito_verification_mechanisms": [
+    "EMAIL"
+  ],
+  "aws_cloud_logic_custom": [
+    {
+      "name": "ecommerceApi",
+      "endpoint": "https://moa3h6kcmf.execute-api.ap-south-1.amazonaws.com/dev",
+      "region": "ap-south-1"
+    }
+  ]
+}

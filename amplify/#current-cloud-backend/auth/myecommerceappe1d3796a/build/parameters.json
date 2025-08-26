@@ -1,0 +1,77 @@
+{
+  "identityPoolName": "myecommerceappe1d3796a_identitypool_e1d3796a",
+  "allowUnauthenticatedIdentities": false,
+  "resourceNameTruncated": "myecome1d3796a",
+  "userPoolName": "myecommerceappe1d3796a_userpool_e1d3796a",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaConfiguration": "OFF",
+  "mfaTypes": [
+    "SMS Text Message"
+  ],
+  "smsAuthenticationMessage": "Your authentication code is {####}",
+  "smsVerificationMessage": "Your verification code is {####}",
+  "emailVerificationSubject": "Welcome to Everscale Shop – Verify Your Email",
+  "emailVerificationMessage": "Welcome to Everscale Shop! Your verification code is {####}. Please enter this code to verify your email and start shopping.",
+  "defaultPasswordPolicy": false,
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "requiredAttributes": [
+    "email"
+  ],
+  "aliasAttributes": [],
+  "userpoolClientGenerateSecret": false,
+  "userpoolClientRefreshTokenValidity": 30,
+  "userpoolClientWriteAttributes": [
+    "email"
+  ],
+  "userpoolClientReadAttributes": [
+    "email"
+  ],
+  "userpoolClientLambdaRole": "myecome1d3796a_userpoolclient_lambda_role",
+  "userpoolClientSetAttributes": false,
+  "sharedId": "e1d3796a",
+  "resourceName": "myecommerceappe1d3796a",
+  "authSelections": "identityPoolAndUserPool",
+  "useDefault": "manual",
+  "usernameAttributes": [
+    "email"
+  ],
+  "userPoolGroupList": [],
+  "serviceName": "Cognito",
+  "usernameCaseSensitive": false,
+  "useEnabledMfas": true,
+  "authRoleArn": {
+    "Fn::GetAtt": [
+      "AuthRole",
+      "Arn"
+    ]
+  },
+  "unauthRoleArn": {
+    "Fn::GetAtt": [
+      "UnauthRole",
+      "Arn"
+    ]
+  },
+  "breakCircularDependency": true,
+  "dependsOn": [],
+  "userPoolGroups": false,
+  "adminQueries": false,
+  "triggers": "{}",
+  "hostedUI": true,
+  "hostedUIDomainName": "everscale-shop",
+  "authProvidersUserPool": [
+    "Google"
+  ],
+  "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+  "parentStack": {
+    "Ref": "AWS::StackId"
+  },
+  "permissions": [],
+  "authProviders": [
+    "accounts.google.com"
+  ],
+  "thirdPartyAuth": true,
+  "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\",\"http://localhost:3000/\",\"http://localhost:3000/callback/\",\"https://main.do0i3bl6r5ij1.amplifyapp.com/\",\"https://main.do0i3bl6r5ij1.amplifyapp.com/callback/\"],\"LogoutURLs\":[\"https://main.do0i3bl6r5ij1.amplifyapp.com/callback/\",\"https://main.do0i3bl6r5ij1.amplifyapp.com/\",\"http://localhost:3000/\"]}"
+}
