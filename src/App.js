@@ -1330,7 +1330,7 @@ function App() {
                 value={headerSearch}
                 onChange={(e) => setHeaderSearch(e.target.value)}
                 type="text"
-                placeholder="Search Amazon"
+                placeholder="Search 🥇EverScale"
                 aria-label="Search"
                 className="flex-1 px-3 py-2 border-y border-transparent focus:border-orange-400 focus:ring-0 text-black"
               />
